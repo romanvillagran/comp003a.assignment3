@@ -61,6 +61,7 @@ namespace comp003a.assignment3
                             break;
 
                         }
+                    case 3:
 
                 }
 
