@@ -62,6 +62,32 @@ namespace comp003a.assignment3
 
                         }
                     case 3:
+                        Console.Write("Enter the expense name to remove: "); 
+                        string removeName = Console.ReadLine(); 
+                        bool found = false; 
+
+                        for (int i = 0; i < count; i++) 
+                        {
+                            if (expenses[i].Equals(removeName, StringComparison.OrdinalIgnoreCase)) 
+                            {
+                                
+                                for (int j = i; j < count - 1; j++) 
+                                {
+                                    expenses[j] = expenses[j + 1]; 
+                                    expenseAmount[j] = expenseAmount[j + 1]; 
+                                }
+
+                                count--; 
+                                found = true;
+                                Console.WriteLine("Expense removed successfully!"); 
+                                break; 
+                            }
+                        }
+                        if (!found) 
+                        {
+                            Console.WriteLine("Expense not found."); 
+                        }
+                        break; 
 
                 }
 
