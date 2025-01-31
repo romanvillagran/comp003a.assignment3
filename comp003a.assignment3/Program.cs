@@ -87,7 +87,14 @@ namespace comp003a.assignment3
                         {
                             Console.WriteLine("Expense not found."); 
                         }
-                        break; 
+                        break;
+                    case 4:
+                        Console.WriteLine("Exiting the program. Goodbye!"); 
+                        return; 
+
+                    default: 
+                        Console.WriteLine("Invalid option. Please try again."); 
+                        break;
 
                 }
 
